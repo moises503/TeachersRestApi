@@ -3,10 +3,15 @@ package com.moises.teachers.dao;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
 import com.moises.teachers.model.Teacher;
 import com.moises.teachers.model.TeacherSocialMedia;
 
-
+@Repository
+@Transactional
 public class TeacherDaoImpl extends AbstractSession implements TeacherDao {
 	
 

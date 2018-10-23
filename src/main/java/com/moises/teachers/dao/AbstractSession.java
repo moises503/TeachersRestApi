@@ -1,16 +1,17 @@
  package com.moises.teachers.dao;
 
+import javax.persistence.EntityManager;
+
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class AbstractSession {
 	
 	@Autowired
-	private SessionFactory sessionFactory;
+	private EntityManager sessionFactory;
 	
 	protected Session getSession() {
-		return sessionFactory.getCurrentSession();
+		return sessionFactory.unwrap(Session.class);
 	}
 	
 	

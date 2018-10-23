@@ -2,8 +2,14 @@ package com.moises.teachers.dao;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
 import com.moises.teachers.model.Course;
 
+@Repository
+@Transactional
 public class CourseDaoImpl extends AbstractSession implements CourseDao{
 
 	@Override

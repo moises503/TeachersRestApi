@@ -2,9 +2,15 @@ package com.moises.teachers.dao;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
 import com.moises.teachers.model.SocialMedia;
 import com.moises.teachers.model.TeacherSocialMedia;
 
+@Repository
+@Transactional
 public class SocialMediaDaoImpl extends AbstractSession implements SocialMediaDao{
 
 	@Override
